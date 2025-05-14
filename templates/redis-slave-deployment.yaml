@@ -9,7 +9,7 @@ spec:
       app: redis
       role: slave
       tier: backend
-  replicas: 5
+  replicas: {{ .Values.redis.slave.replicas }}
   template:
     metadata:
       labels:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: slave
-        image: redis
+        image: redis:{{ .Values.redis.slave.version }}
         resources:
           requests:
             cpu: 100m
