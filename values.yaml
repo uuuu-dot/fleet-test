@@ -3,8 +3,8 @@ replicas: 1
 serviceType: NodePort
 redis:
   master:
-    version: "6.2.5"
+    version: "6.2.6"
   slave:
-    version: "6.2.5"
-    replicas: 2
+    version: "6.2.6"
+    replicas: 5
 
